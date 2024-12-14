@@ -125,7 +125,7 @@
 }
 
 .hero-top-img {
-    width: 1240px;
+    width: 100%;
     border-radius: 8px;
     height: 150px;
 }
@@ -198,8 +198,13 @@
 }
 
 
+@media (max-width: 1200px){
+
+}
+
 @media (max-width: 768px) {
-    .header-container {
+    .header-container , 
+    .hero-container {
         padding-left: 25px;
         padding-right: 25px;
     }
@@ -210,3 +215,15 @@
         width: 230px;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .hero-bottom-img{
+        margin-bottom: 20px;
+    }
+
+    .hero-bottom-user{
+        margin-right: 20px;
+    }
+    
+}
+
