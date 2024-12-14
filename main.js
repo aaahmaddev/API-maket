@@ -17,7 +17,8 @@ setTimeout(() => {
             // card
             const cardElement = document.createElement('div');
             cardElement.classList.add('card', 'mt-3', 'shadow',);
-            cardElement.style.width = '18rem';
+            cardElement.style.width = '20rem';
+
 
             // card top
             const cardTopElement = document.createElement('div');
@@ -39,24 +40,25 @@ setTimeout(() => {
             const CardTopTexts = document.createElement('div');
             CardTopTexts.classList.add('card-top-texts');
             cardTopElement.appendChild(CardTopTexts);
-
+            cardTopElement.style.cursor = 'pointer';
 
 
 
             // card top title 
 
-            const CardTopTitle = document.createElement('h5');
-            CardTopTitle.classList.add('card-top-title', 'fw-bold' , 'm-0');
+            const CardTopTitle = document.createElement('p');
+            CardTopTitle.classList.add('card-top-title', 'fw-bold', 'm-0');
             CardTopTitle.textContent = news.author;
             CardTopTexts.appendChild(CardTopTitle);
 
             // Card top Author
 
             const CardTopAuthor = document.createElement('p');
-            CardTopAuthor.classList.add('card-top-author', 'fw-bold' , 'm-0');
+            CardTopAuthor.classList.add('card-top-author', 'fw-bold', 'm-0');
             CardTopAuthor.textContent = news.author
             CardTopTexts.appendChild(CardTopAuthor);
             CardTopAuthor.style.opacity = "80%"
+            CardTopAuthor.style.fontSize = "12px";
 
             // img
             const imgElement = document.createElement('img');
@@ -67,7 +69,7 @@ setTimeout(() => {
 
             // card body
             const cardBodyElement = document.createElement('div');
-            cardBodyElement.classList.add('card-body', 'p-0');
+            cardBodyElement.classList.add('card-body', 'ps-3', 'pe-3');
             cardElement.appendChild(cardBodyElement);
 
             // card title
@@ -78,17 +80,43 @@ setTimeout(() => {
 
             // card text
             const cardTextElement = document.createElement('p');
-            cardTextElement.classList.add('card-text', 'text-center');
+            cardTextElement.classList.add('card-text',);
             cardTextElement.textContent = news.description;
-            cardElement.appendChild(cardTextElement);
+            cardTextElement.style.fontSize = '17px';
+            cardTextElement.style.opacity = '60%';
+            cardBodyElement.appendChild(cardTextElement);
 
-            // card link
-            // const cardLinkElement = document.createElement('a');
-            // cardLinkElement.classList.add('btn', 'btn-primary', 'w-75', 'mx-auto');
-            // cardLinkElement.textContent = 'Link';
-            // cardLinkElement.href = news.url;
-            // cardLinkElement.target = '_blank';
-            // cardElement.appendChild(cardLinkElement);
+            // Button Div
+            const buttonDiv = document.createElement('div');
+            buttonDiv.classList.add('d-flex', 'justify-content-end', 'align-items-center', 'mt-3');
+            cardBodyElement.appendChild(buttonDiv);
+
+            // Button Div Hover
+            buttonDiv.addEventListener('mouseover', () => {
+                buttonDiv.style.cursor = 'pointer';
+                
+
+            // Button
+
+            const buttonElement = document.createElement('button');
+            buttonElement.classList.add('button');
+            buttonElement.style.width = '35%';
+            buttonElement.style.height = '35px';
+            buttonElement.style.borderRadius = '20px';
+            buttonElement.style.backgroundColor = 'transparent';
+            buttonElement.style.border = '1px solid #3C3C43';
+            buttonDiv.appendChild(buttonElement);
+
+
+
+            // Button Text
+            const buttonTextElement = document.createElement('a');
+            buttonTextElement.classList.add('button-text', 'text-decoration-none', 'text-black');
+            buttonTextElement.style.opacity = '80%';
+            buttonTextElement.textContent = 'Go In News';
+            buttonTextElement.href = news.url;
+            buttonTextElement.target = '_blank';
+            buttonElement.appendChild(buttonTextElement);
 
             document.querySelector('.main-sec-inner').appendChild(cardElement);
         }
