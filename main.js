@@ -17,7 +17,7 @@ setTimeout(() => {
             // card
             const cardElement = document.createElement('div');
             cardElement.classList.add('card', 'mt-3', 'shadow',);
-            cardElement.style.width = '20rem';
+            cardElement.style.width = '22rem';
 
 
             // card top
@@ -91,10 +91,9 @@ setTimeout(() => {
             buttonDiv.classList.add('d-flex', 'justify-content-end', 'align-items-center', 'mt-3');
             cardBodyElement.appendChild(buttonDiv);
 
-            // Button Div Hover
-            buttonDiv.addEventListener('mouseover', () => {
-                buttonDiv.style.cursor = 'pointer';
-                
+
+
+
 
             // Button
 
@@ -122,3 +121,5 @@ setTimeout(() => {
         }
     })
 }, 1000);
+
+
