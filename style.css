@@ -202,19 +202,29 @@
 
 footer {
     background-color: #0A142F;
-    margin-top: 334px;
+    margin-top: 204px;
     padding-top: 150px;
     padding-bottom: 50px;
 }
 
 .footer-logo{
     color: #FC4308;
+    font-size: 30px;
+    font-weight: bolder;
+    cursor: pointer;
 }
 
 .footer-number , 
 .footer-email{
     cursor: pointer;
     opacity: 75%;
+}
+
+.footer-number:hover{
+    opacity: 100%;
+} 
+.footer-email:hover{
+    opacity: 100%;
 }
 
 .footer-l-t-text{
@@ -226,6 +236,131 @@ footer {
 .footer-right-inner{
     gap: 200px;
 }
+
+.footer-link-one{
+    opacity: 75%;
+    cursor: pointer;
+}
+/* line */
+.footer-link-one {
+    position: relative;
+    color: #333;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.footer-link-one::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #F81539;
+    transition: width 0.3s ease-in-out;
+}
+
+.footer-link-one:hover::after {
+    width: 90%;
+}
+
+
+/* Facebook line */
+.footer-link-facebook {
+    position: relative;
+    color: #333;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.footer-link-facebook::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: 	#1877F2;
+    transition: width 0.3s ease-in-out;
+}
+
+.footer-link-facebook:hover::after {
+    width: 100%;
+}
+
+/* Twitter line */
+
+.footer-link-twitter {
+    position: relative;
+    color: #333;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.footer-link-twitter::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: 	#08A0E9;
+    transition: width 0.3s ease-in-out;
+}
+
+.footer-link-twitter:hover::after {
+    width: 70%;
+}
+
+
+/* Linkedin line */
+
+.footer-link-linkedin {
+    position: relative;
+    color: #333;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.footer-link-linkedin::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color:#0077B5;
+    transition: width 0.3s ease-in-out;
+}
+
+.footer-link-linkedin:hover::after {
+    width: 85%;
+}
+
+/* Instagram line */
+
+.footer-link-instagram {
+    position: relative;
+    color: #333;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.footer-link-instagram::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color:#C13584;
+    transition: width 0.3s ease-in-out;
+}
+
+.footer-link-instagram:hover::after {
+    width: 100%;
+}
+
 
 .footer-linkk{
     opacity: 75%;
@@ -239,7 +374,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
+    cursor: not-allowed;
 }
 
 .footer-b-text{
@@ -274,4 +409,9 @@ footer {
         margin-right: 20px;
     }
     
+.footer-container{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
 }

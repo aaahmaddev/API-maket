@@ -17,7 +17,7 @@ setTimeout(() => {
             // card
             const cardElement = document.createElement('div');
             cardElement.classList.add('card', 'mt-3', 'shadow',);
-            cardElement.style.width = '22rem';
+            cardElement.style.width = '28%';            
 
 
             // card top
@@ -65,6 +65,7 @@ setTimeout(() => {
             imgElement.src = news.urlToImage;
             imgElement.classList.add('card-img-top');
             imgElement.style.height = '200px';
+            imgElement.style.borderRadius = '0px';
             cardElement.appendChild(imgElement);
 
             // card body
@@ -110,7 +111,8 @@ setTimeout(() => {
 
             // Button Text
             const buttonTextElement = document.createElement('a');
-            buttonTextElement.classList.add('button-text', 'text-decoration-none', 'text-black');
+            buttonTextElement.classList.add('button-text', 'text-decoration-none');
+            buttonTextElement.style.color = 'black';
             buttonTextElement.style.opacity = '80%';
             buttonTextElement.textContent = 'Go In News';
             buttonTextElement.href = news.url;
@@ -118,6 +120,19 @@ setTimeout(() => {
             buttonElement.appendChild(buttonTextElement);
 
             document.querySelector('.main-sec-inner').appendChild(cardElement);
+
+            // Button Hover
+            buttonElement.addEventListener('mouseover', () => {
+                buttonElement.style.backgroundColor = '#3C3C43';
+                buttonElement.style.transition = 'background-color 0.3s ease';
+                buttonElement.style.border = '3px solid black';
+                buttonTextElement.style.color = 'white';
+            });
+            buttonElement.addEventListener('mouseout', () => {
+                buttonElement.style.backgroundColor = 'transparent';   
+                buttonElement.style.border = '1px solid #3C3C43';          
+                buttonTextElement.style.color = 'black';
+            });
         }
     })
 }, 1000);
