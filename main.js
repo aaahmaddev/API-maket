@@ -17,7 +17,7 @@ setTimeout(() => {
             // card
             const cardElement = document.createElement('div');
             cardElement.classList.add('card', 'mt-3', 'shadow',);
-            cardElement.style.width = '28%';            
+            cardElement.style.width = '40vh';            
 
 
             // card top
